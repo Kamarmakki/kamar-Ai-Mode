@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأدوات المجانية - RankBoost</title>
+    <meta name="description" content="استخدم أدوات SEO المجانية من RankBoost لتحليل وتحسين موقعك">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #2563eb; --secondary: #8b5cf6; --accent: #ec4899; --dark: #0f172a; --light: #f8fafc; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .page-header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 6rem 0 4rem; }
+        .tool-card { border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.3s; height: 100%; cursor: pointer; }
+        .tool-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .tool-icon { width: 70px; height: 70px; border-radius: 15px; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 2rem; }
+        .category-badge { background: var(--primary); color: white; padding: 0.25rem 1rem; border-radius: 20px; font-size: 0.8rem; }
+        .navbar { box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-rocket"></i> RankBoost
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">الميزات</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="tools.html">الأدوات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">الأسعار</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">الموارد</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="blog.html">المدونة</a></li>
+                            <li><a class="dropdown-item" href="wiki.html">الموسوعة</a></li>
+                            <li><a class="dropdown-item" href="faq.html">الأسئلة</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex gap-2 me-2">
+                    <a href="login.html" class="btn btn-outline-primary">تسجيل الدخول</a>
+                    <a href="signup.html" class="btn btn-primary">ابدأ مجاناً</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">الأدوات المجانية</h1>
+            <p class="lead">استخدم أدواتنا المتقدمة مجاناً دون الحاجة للتسجيل</p>
+        </div>
+    </section>
+
+    <!-- Analysis Tools -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">أدوات التحليل</h2>
+                <p class="lead text-muted">أدوات متقدمة لتحليل موقعك وتقديم توصيات دقيقة</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="tool-card" onclick="window.location.href='tools/seo-checker.html'">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="tool-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <span class="category-badge">تحليل</span>
+                        </div>
+                        <h4>مدقق السيو الشامل</h4>
+                        <p>تحليل شامل لموقعك من الناحية التقنية والمحتوى وتقديم توصيات مفصلة لتحسين السيو</p>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check text-success"></i> تحليل تقني كامل</li>
+                            <li><i class="fas fa-check text-success"></i> فحص المحتوى</li>
+                            <li><i class="fas fa-check text-success"></i> تقرير PDF مجاني</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">استخدم الأداة</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tool-card" onclick="window.location.href='tools/keyword-checker.html'">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="tool-icon">
+                                <i class="fas fa-keyboard"></i>
+                            </div>
+                            <span class="category-badge">تحليل</span>
+                        </div>
+                        <h4>محقق الكلمات المفتاحية</h4>
+                        <p>تحليل كفاءة صفحاتك للكلمات المفتاحية المستهدفة وتقديم توصيات للتحسين</p>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check text-success"></i> تحليل الكلمات المفتاحية</li>
+                            <li><i class="fas fa-check text-success"></i> مقارنة بالمنافسين</li>
+                            <li><i class="fas fa-check text-success"></i> توصيات التحسين</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">استخدم الأداة</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tool-card" onclick="window.location.href='tools/backlink-checker.html'">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="tool-icon">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                            <span class="category-badge">تحليل</span>
+                        </div>
+                        <h4>مدقق الباك لينك</h4>
+                        <p>تحليل روابطك الخارجية واكتشاف فرص جديدة لبناء روابط عالية الجودة</p>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check text-success"></i> تحليل الروابط الخلفية</li>
+                            <li><i class="fas fa-check text-success"></i> جودة الروابط</li>
+                            <li><i class="fas fa-check text-success"></i> اكتشاف فرص جديدة</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">استخدم الأداة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monitoring Tools -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">أدوات المتابعة</h2>
+                <p class="lead text-muted">تابع أداء موقعك وترتيبك في محركات البحث</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="tool-card" onclick="window.location.href='tools/ranking-checker.html'">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="tool-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <span class="category-badge">متابعة</span>
+                        </div>
+                        <h4>متتبع الترتيب</h4>
+                        <p>متابعة ترتيب موقعك في نتائج البحث لكلماتك المفتاحية المستهدفة</p>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check text-success"></i> متابعة الترتيب اليومية</li>
+                            <li><i class="fas fa-check text-success"></i> تقارير مفصلة</li>
+                            <li><i class="fas fa-check text-success"></i> مقارنة بالمنافسين</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">استخدم الأداة</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tool-card" onclick="window.location.href='tools/speed-checker.html'">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="tool-icon">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <span class="category-badge">متابعة</span>
+                        </div>
+                        <h4>مدقق السرعة</h4>
+                        <p>حلل سرعة تحميل موقعك واحصل على توصيات لتحسين الأداء</p>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check text-success"></i> تحليل السرعة</li>
+                            <li><i class="fas fa-check text-success"></i> توصيات التحسين</li>
+                            <li><i class="fas fa-check text-success"></i> مقارنة بالمعايير</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">استخدم الأداة</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tool-card" onclick="window.location.href='tools/seo-compare.html'">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="tool-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <span class="category-badge">متابعة</span>
+                        </div>
+                        <h4>مقارنة السيو</h4>
+                        <p>قارن بين موقعك ومواقع المنافسين واكتشف نقاط القوة والضعف</p>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check text-success"></i> مقارنة شاملة</li>
+                            <li><i class="fas fa-check text-success"></i> تحليل الفجوات</li>
+                            <li><i class="fas fa-check text-success"></i> توصيات استراتيجية</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">استخدم الأداة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optimization Tools -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">أدوات التحسين</h2>
+                <p class="lead text-muted">أدوات متقدمة لتحسين موقعك ومحتواك</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="tool-card" onclick="window.location.href='tools/redirect-checker.html'">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="tool-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <span class="category-badge">تحسين</span>
+                        </div>
+                        <h4>مدقق التحويلات</h4>
+                        <p>فحص تحويلات الموقع وتصحيح الأخطاء التي تؤثر على السيو</p>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check text-success"></i> فحص التحويلات</li>
+                            <li><i class="fas fa-check text-success"></i> كود التصحيح</li>
+                            <li><i class="fas fa-check text-success"></i> دعم Apache و NGINX</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">استخدم الأداة</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tool-card" onclick="window.location.href='tools/serp-generator.html'">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="tool-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <span class="category-badge">تحسين</span>
+                        </div>
+                        <h4>مولد نتائج البحث</h4>
+                        <p>أنشئ معاينة لظهور موقعك في نتائج البحث وافحص العناوين والأوصاف</p>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check text-success"></i> معاينة SERP</li>
+                            <li><i class="fas fa-check text-success"></i> تحسين العناوين</li>
+                            <li><i class="fas fa-check text-success"></i> تحسين الأوصاف</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">استخدم الأداة</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tool-card" onclick="window.location.href='tools/tfidf-tool.html'">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="tool-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <span class="category-badge">تحسين</span>
+                        </div>
+                        <h4>أداة TF*IDF</h4>
+                        <p>حلل محتواك مقارنة بالصفحات الأعلى ترتيباً وحسّن كفاءة الكلمات المفتاحية</p>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check text-success"></i> تحليل TF*IDF</li>
+                            <li><i class="fas fa-check text-success"></i> مقارنة بالمنافسين</li>
+                            <li><i class="fas fa-check text-success"></i> توصيات المحتوى</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">استخدم الأداة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Tools -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">أدوات البحث</h2>
+                <p class="lead text-muted">اكتشف فرص جديدة وقم بأبحاث متقدمة</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="tool-card" onclick="window.location.href='tools/keyword-research.html'">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="tool-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                            <span class="category-badge">بحث</span>
+                        </div>
+                        <h4>أداة بحث الكلمات</h4>
+                        <p>اكتشف كلمات مفتاحية جديدة وحجم البحث وصعوبة التنافس عليها</p>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check text-success"></i> اقتراح كلمات مفتاحية</li>
+                            <li><i class="fas fa-check text-success"></i> حجم البحث الشهري</li>
+                            <li><i class="fas fa-check text-success"></i> تحليل الصعوبة</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">استخدم الأداة</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tool-card" onclick="window.location.href='tools/broken-links.html'">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="tool-icon">
+                                <i class="fas fa-unlink"></i>
+                            </div>
+                            <span class="category-badge">بحث</span>
+                        </div>
+                        <h4>مدقق الروابط المكسورة</h4>
+                        <p>اكتشف الروابط المعطلة في موقعك وأصلحها بسهولة</p>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check text-success"></i> فحص الروابط</li>
+                            <li><i class="fas fa-check text-success"></i> تقرير بالروابط المكسورة</li>
+                            <li><i class="fas fa-check text-success"></i> توصيات الإصلاح</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">استخدم الأداة</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tool-card" onclick="window.location.href='tools/meta-generator.html'">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="tool-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span class="category-badge">بحث</span>
+                        </div>
+                        <h4>مولد Meta Tags</h4>
+                        <p>أنشئ وسوم meta محسّنة لمحركات البحث بسهولة</p>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check text-success"></i> توليد العناوين</li>
+                            <li><i class="fas fa-check text-success"></i> توليد الأوصاف</li>
+                            <li><i class="fas fa-check text-success"></i> تحسين الكلمات المفتاحية</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3">استخدم الأداة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 text-white" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4">هل تحتاج إلى أدوات متقدمة أكثر؟</h2>
+            <p class="lead mb-4">اشترك في خططنا المدفوعة للحصول على أدوات احترافية وتقارير مفصلة</p>
+            <a href="pricing.html" class="btn btn-light btn-lg">
+                <i class="fas fa-crown"></i> اكتشف الخطط المدفوعة
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3"><i class="fas fa-rocket"></i> RankBoost</h5>
+                    <p>أقوى منصة عربية متخصصة في تحسين محركات البحث وتقديم حلول SEO متكاملة</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="mb-3">روابط سريعة</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">الرئيسية</a></li>
+                        <li><a href="features.html" class="text-white-50">الميزات</a></li>
+                        <li><a href="tools.html" class="text-white-50">الأدوات</a></li>
+                        <li><a href="pricing.html" class="text-white-50">الأسعار</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="mb-3">الموارد</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="blog.html" class="text-white-50">المدونة</a></li>
+                        <li><a href="wiki.html" class="text-white-50">الموسوعة</a></li>
+                        <li><a href="faq.html" class="text-white-50">الأسئلة</a></li>
+                        <li><a href="contact.html" class="text-white-50">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-3">تواصل معنا</h6>
+                    <p><i class="fas fa-envelope"></i> info@rankboost.com</p>
+                    <p><i class="fas fa-phone"></i> +966 50 000 0000</p>
+                    <p><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</p>
+                    <a href="contact.html" class="btn btn-outline-light btn-sm">تواصل الآن</a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 RankBoost. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

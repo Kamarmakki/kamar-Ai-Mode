@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المدونة - RankBoost</title>
+    <meta name="description" content="اقرأ أحدث المقالات والنصائح حول تحسين محركات البحث والتسويق الرقمي">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #2563eb; --secondary: #8b5cf6; --accent: #ec4899; --dark: #0f172a; --light: #f8fafc; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .page-header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 6rem 0 4rem; }
+        .blog-card { border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.3s; height: 100%; }
+        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .blog-image { height: 200px; object-fit: cover; }
+        .category-badge { background: var(--primary); color: white; padding: 0.25rem 1rem; border-radius: 20px; font-size: 0.8rem; }
+        .sidebar-widget { background: white; border-radius: 15px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .navbar { box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-rocket"></i> RankBoost
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">الميزات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools.html">الأدوات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">الأسعار</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">الموارد</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="blog.html">المدونة</a></li>
+                            <li><a class="dropdown-item" href="wiki.html">الموسوعة</a></li>
+                            <li><a class="dropdown-item" href="faq.html">الأسئلة</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex gap-2 me-2">
+                    <a href="login.html" class="btn btn-outline-primary">تسجيل الدخول</a>
+                    <a href="signup.html" class="btn btn-primary">ابدأ مجاناً</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">المدونة</h1>
+            <p class="lead">أحدث المقالات والنصائح حول تحسين محركات البحث والتسويق الرقمي</p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <!-- Featured Post -->
+                    <div class="blog-card mb-4">
+                        <img src="https://picsum.photos/seed/seo-trends-2024/800/400.jpg" class="blog-image w-100" alt="اتجاهات السيو 2024">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="category-badge">اتجاهات السيو</span>
+                                <small class="text-muted"><i class="fas fa-calendar"></i> 15 مارس 2024</small>
+                            </div>
+                            <h3>اتجاهات تحسين محركات البحث لعام 2024</h3>
+                            <p class="text-muted mb-3">اكتشف أحدث الاتجاهات والتقنيات في عالم SEO وكيفية تطبيقها لتحسين ترتيب موقعك في نتائج البحث...</p>
+                            <a href="#" class="btn btn-primary">اقرأ المزيد</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Posts Grid -->
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="blog-card">
+                                <img src="https://picsum.photos/seed/keyword-research/400/200.jpg" class="blog-image w-100" alt="بحث الكلمات المفتاحية">
+                                <div class="p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span class="category-badge">الكلمات المفتاحية</span>
+                                        <small class="text-muted"><i class="fas fa-calendar"></i> 12 مارس 2024</small>
+                                    </div>
+                                    <h5>دليل شامل لبحث الكلمات المفتاحية</h5>
+                                    <p class="text-muted small">تعلم كيفية إجراء بحث فعال عن الكلمات المفتاحية واختيار الأفضل لموقعك...</p>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">اقرأ المزيد</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="blog-card">
+                                <img src="https://picsum.photos/seed/link-building/400/200.jpg" class="blog-image w-100" alt="بناء الروابط">
+                                <div class="p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span class="category-badge">بناء الروابط</span>
+                                        <small class="text-muted"><i class="fas fa-calendar"></i> 10 مارس 2024</small>
+                                    </div>
+                                    <h5>استراتيجيات بناء الروابط في 2024</h5>
+                                    <p class="text-muted small">أفضل الطرق لبناء روابط عالية الجودة وتجنب العقوبات من جوجل...</p>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">اقرأ المزيد</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="blog-card">
+                                <img src="https://picsum.photos/seed/content-optimization/400/200.jpg" class="blog-image w-100" alt="تحسين المحتوى">
+                                <div class="p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span class="category-badge">تحسين المحتوى</span>
+                                        <small class="text-muted"><i class="fas fa-calendar"></i> 8 مارس 2024</small>
+                                    </div>
+                                    <h5>كتابة محتوى متوافق مع السيو</h5>
+                                    <p class="text-muted small">نصائح عملية لكتابة محتوى يجذب القراء ومحركات البحث في نفس الوقت...</p>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">اقرأ المزيد</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="blog-card">
+                                <img src="https://picsum.photos/seed/technical-seo/400/200.jpg" class="blog-image w-100" alt="السيو التقني">
+                                <div class="p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span class="category-badge">السيو التقني</span>
+                                        <small class="text-muted"><i class="fas fa-calendar"></i> 5 مارس 2024</small>
+                                    </div>
+                                    <h5>أساسيات السيو التقني للمبتدئين</h5>
+                                    <p class="text-muted small">كل ما تحتاج لمعرفته عن الجوانب التقنية لتحسين محركات البحث...</p>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">اقرأ المزيد</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">السابق</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">التالي</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget">
+                        <h5 class="mb-3">البحث في المدونة</h5>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="ابحث عن مقال...">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <h5 class="mb-3">التصنيفات</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#" class="text-decoration-none"><i class="fas fa-angle-left ms-2"></i>اتجاهات السيو (12)</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none"><i class="fas fa-angle-left ms-2"></i>الكلمات المفتاحية (8)</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none"><i class="fas fa-angle-left ms-2"></i>بناء الروابط (6)</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none"><i class="fas fa-angle-left ms-2"></i>تحسين المحتوى (15)</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none"><i class="fas fa-angle-left ms-2"></i>السيو التقني (9)</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Popular Posts Widget -->
+                    <div class="sidebar-widget">
+                        <h5 class="mb-3">المقالات الأكثر قراءة</h5>
+                        <div class="d-flex mb-3">
+                            <img src="https://picsum.photos/seed/popular1/80/80.jpg" class="rounded me-3" alt="مقال شائع">
+                            <div>
+                                <h6 class="mb-1">كيفية تحسين سرعة الموقع</h6>
+                                <small class="text-muted">1,234 مشاهدة</small>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <img src="https://picsum.photos/seed/popular2/80/80.jpg" class="rounded me-3" alt="مقال شائع">
+                            <div>
+                                <h6 class="mb-1">أخطاء السيو الشائعة</h6>
+                                <small class="text-muted">987 مشاهدة</small>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <img src="https://picsum.photos/seed/popular3/80/80.jpg" class="rounded me-3" alt="مقال شائع">
+                            <div>
+                                <h6 class="mb-1">SEO للمبتدئين</h6>
+                                <small class="text-muted">856 مشاهدة</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Widget -->
+                    <div class="sidebar-widget text-center">
+                        <h5 class="mb-3">النشرة البريدية</h5>
+                        <p class="text-muted small mb-3">اشترك للحصول على أحدث المقالات والنصائح مباشرة في بريدك</p>
+                        <form>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="بريدك الإلكتروني">
+                                <button class="btn btn-primary" type="submit">اشترك</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 text-white" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4">هل تريد المزيد من النصائح؟</h2>
+            <p class="lead mb-4">اشترك في نشرتنا البريدية واحصل على دليل SEO مجاني</p>
+            <a href="#" class="btn btn-light btn-lg">
+                <i class="fas fa-download"></i> حمل الدليل المجاني
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3"><i class="fas fa-rocket"></i> RankBoost</h5>
+                    <p>أقوى منصة عربية متخصصة في تحسين محركات البحث وتقديم حلول SEO متكاملة</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="mb-3">روابط سريعة</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">الرئيسية</a></li>
+                        <li><a href="features.html" class="text-white-50">الميزات</a></li>
+                        <li><a href="tools.html" class="text-white-50">الأدوات</a></li>
+                        <li><a href="pricing.html" class="text-white-50">الأسعار</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="mb-3">الموارد</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="blog.html" class="text-white-50">المدونة</a></li>
+                        <li><a href="wiki.html" class="text-white-50">الموسوعة</a></li>
+                        <li><a href="faq.html" class="text-white-50">الأسئلة</a></li>
+                        <li><a href="contact.html" class="text-white-50">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-3">تواصل معنا</h6>
+                    <p><i class="fas fa-envelope"></i> info@rankboost.com</p>
+                    <p><i class="fas fa-phone"></i> +966 50 000 0000</p>
+                    <p><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</p>
+                    <a href="contact.html" class="btn btn-outline-light btn-sm">تواصل الآن</a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 RankBoost. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

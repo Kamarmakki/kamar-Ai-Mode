@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RankBoost - أقوى منصة عربية لتحسين محركات البحث (SEO)</title>
+    <meta name="description" content="RankBoost هي المنصة العربية الرائدة في تحسين محركات البحث. أدوات مجانية، تحليل احترافي، وخدمات SEO متكاملة لزيادة ترتيب موقعك في جوجل.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #2563eb; --secondary: #8b5cf6; --accent: #ec4899; --dark: #0f172a; --light: #f8fafc; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 8rem 0 5rem; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -150px; left: -150px; width: 400px; height: 400px; border-radius: 50%; background: rgba(139, 92, 246, 0.3); animation: float 20s infinite ease-in-out; }
+        .hero::after { content: ''; position: absolute; bottom: -200px; right: -200px; width: 500px; height: 500px; border-radius: 50%; background: rgba(236, 72, 153, 0.2); animation: float 25s infinite ease-in-out reverse; }
+        .navbar { box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .feature-card, .tool-card, .pricing-card { border-radius: 15px; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; height: 100%; }
+        .feature-card:hover, .tool-card:hover, .pricing-card:hover { transform: translateY(-5px); }
+        .btn-primary { background: var(--primary); border: none; border-radius: 25px; padding: 12px 30px; }
+        .btn-primary:hover { background: #1d4ed8; transform: translateY(-2px); }
+        .stat-number { font-size: 2.5rem; font-weight: 800; }
+        .pricing-card.featured { border: 3px solid var(--primary); transform: scale(1.05); }
+        .testimonial-card { background: white; border-radius: 15px; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        @keyframes float { 0%, 100% { transform: translateY(0) translateX(0); } 25% { transform: translateY(-20px) translateX(10px); } 50% { transform: translateY(0) translateX(20px); } 75% { transform: translateY(20px) translateX(10px); } }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-rocket"></i> RankBoost
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">الميزات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools.html">الأدوات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">الأسعار</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">الموارد</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="blog.html">المدونة</a></li>
+                            <li><a class="dropdown-item" href="wiki.html">الموسوعة</a></li>
+                            <li><a class="dropdown-item" href="faq.html">الأسئلة</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex gap-2 me-2">
+                    <a href="login.html" class="btn btn-outline-primary">تسجيل الدخول</a>
+                    <a href="signup.html" class="btn btn-primary">ابدأ مجاناً</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container text-center position-relative">
+            <div class="hero-content">
+                <div class="badge bg-white text-primary mb-4 p-2 px-4 rounded-pill">
+                    <i class="fas fa-star"></i> أقوى منصة SEO في العالم العربي
+                </div>
+                <h1 class="display-4 fw-bold mb-4">RankBoost: ارفع ترتيب موقعك في جوجل</h1>
+                <p class="lead mb-5 mx-auto" style="max-width: 600px;">
+                    احصل على أدوات تحسين محركات البحث الاحترافية التي تحتاجها لزيادة حركة المرور العضوية وتحقيق نتائج ملموسة
+                </p>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a href="signup.html" class="btn btn-light btn-lg">
+                        <i class="fas fa-rocket"></i> ابدأ مجاناً
+                    </a>
+                    <a href="#demo" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-play-circle"></i> شاهد العرض
+                    </a>
+                </div>
+                <div class="row mt-5 pt-5">
+                    <div class="col-md-4">
+                        <div class="stat-number">10,000+</div>
+                        <div>عميل سعيد</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-number">50,000+</div>
+                        <div>كلمة مفتاحية</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-number">98%</div>
+                        <div>رضا العملاء</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">ميزات RankBoost الفريدة</h2>
+                <p class="lead text-muted">نقدم لك مجموعة متكاملة من الأدوات والخدمات لتحسين ظهور موقعك</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                        <h4>تحليل سيو شامل</h4>
+                        <p>تحليل تقني متعمق لموقعك مع تقارير مفصلة وتوصيات عملية لتحسين الأداء</p>
+                        <a href="features.html" class="btn btn-outline-primary">تعرف أكثر</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <i class="fas fa-key fa-3x text-primary mb-3"></i>
+                        <h4>بحث الكلمات المفتاحية</h4>
+                        <p>اكتشف أفضل الكلمات المفتاحية لجمهورك المستهدف مع تحليل المنافسة والحجم</p>
+                        <a href="features.html" class="btn btn-outline-primary">تعرف أكثر</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <i class="fas fa-link fa-3x text-primary mb-3"></i>
+                        <h4>بناء الروابط الخلفية</h4>
+                        <p>استراتيجيات متقدمة لبناء روابط عالية الجودة من مواقع عربية موثوقة</p>
+                        <a href="features.html" class="btn btn-outline-primary">تعرف أكثر</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">أدواتنا المجانية</h2>
+                <p class="lead text-muted">استخدم أدواتنا المتقدمة مجاناً دون الحاجة للتسجيل</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="tool-card text-center">
+                        <i class="fas fa-search fa-2x text-primary mb-3"></i>
+                        <h5>مدقق السيو</h5>
+                        <p>تحليل شامل لموقعك</p>
+                        <a href="tools/seo-checker.html" class="btn btn-sm btn-outline-primary">استخدم</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="tool-card text-center">
+                        <i class="fas fa-keyboard fa-2x text-primary mb-3"></i>
+                        <h5>محقق الكلمات</h5>
+                        <p>تحليل الكلمات المفتاحية</p>
+                        <a href="tools/keyword-checker.html" class="btn btn-sm btn-outline-primary">استخدم</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="tool-card text-center">
+                        <i class="fas fa-chart-bar fa-2x text-primary mb-3"></i>
+                        <h5>متتبع الترتيب</h5>
+                        <p>متابعة ترتيب موقعك</p>
+                        <a href="tools/ranking-checker.html" class="btn btn-sm btn-outline-primary">استخدم</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="tool-card text-center">
+                        <i class="fas fa-tachometer-alt fa-2x text-primary mb-3"></i>
+                        <h5>مدقق السرعة</h5>
+                        <p>تحليل سرعة الموقع</p>
+                        <a href="tools/speed-checker.html" class="btn btn-sm btn-outline-primary">استخدم</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="tools.html" class="btn btn-primary">عرض جميع الأدوات</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">خططنا الأسعار</h2>
+                <p class="lead text-muted">اختر الخطة التي تناسب احتياجات عملك</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="pricing-card text-center">
+                        <h4>الخطة الأساسية</h4>
+                        <div class="h2 text-primary mb-3">$29<span class="text-muted">/شهر</span></div>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success"></i> تحليل سيو شامل</li>
+                            <li><i class="fas fa-check text-success"></i> 5 كلمات مفتاحية</li>
+                            <li><i class="fas fa-check text-success"></i> تحسين 3 صفحات</li>
+                            <li><i class="fas fa-check text-success"></i> تقرير شهري</li>
+                            <li><i class="fas fa-check text-success"></i> دعم عبر البريد</li>
+                        </ul>
+                        <a href="signup.html" class="btn btn-outline-primary w-100">ابدأ الآن</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card featured text-center">
+                        <div class="badge bg-primary position-absolute top-0 start-50 translate-middle mt-3">الأكثر شعبية</div>
+                        <h4>الخطة المتقدمة</h4>
+                        <div class="h2 text-primary mb-3">$79<span class="text-muted">/شهر</span></div>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success"></i> تحليل سيو متقدم</li>
+                            <li><i class="fas fa-check text-success"></i> 25 كلمة مفتاحية</li>
+                            <li><i class="fas fa-check text-success"></i> تحسين 15 صفحة</li>
+                            <li><i class="fas fa-check text-success"></i> 5 باك لينك شهرياً</li>
+                            <li><i class="fas fa-check text-success"></i> تقرير أسبوعي</li>
+                            <li><i class="fas fa-check text-success"></i> دعم عبر الهاتف</li>
+                        </ul>
+                        <a href="signup.html" class="btn btn-primary w-100">ابدأ الآن</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card text-center">
+                        <h4>الخطة الاحترافية</h4>
+                        <div class="h2 text-primary mb-3">$149<span class="text-muted">/شهر</span></div>
+                        <ul class="list-unstyled text-start">
+                            <li><i class="fas fa-check text-success"></i> تحليل سيو احترافي</li>
+                            <li><i class="fas fa-check text-success"></i> 50 كلمة مفتاحية</li>
+                            <li><i class="fas fa-check text-success"></i> تحسين 30 صفحة</li>
+                            <li><i class="fas fa-check text-success"></i> 15 باك لينك شهرياً</li>
+                            <li><i class="fas fa-check text-success"></i> تقرير يومي</li>
+                            <li><i class="fas fa-check text-success"></i> دعم 24/7</li>
+                            <li><i class="fas fa-check text-success"></i> مدير حساب مخصص</li>
+                        </ul>
+                        <a href="signup.html" class="btn btn-outline-primary w-100">ابدأ الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">ماذا يقول عملاؤنا</h2>
+                <p class="lead text-muted">تجارب حقيقية من عملاء سعداء باستخدام RankBoost</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="text-warning mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3">"RankBoost غيرت طريقة عملنا تماماً. زادت حركة المرور لموقعنا بنسبة 300% في 6 أشهر فقط. الأدوات سهلة الاستخدام والدعم فائق الاحترافية."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://picsum.photos/seed/user1/50/50.jpg" class="rounded-circle me-3" alt="عميل">
+                            <div>
+                                <h6 class="mb-0">أحمد محمد</h6>
+                                <small class="text-muted">مدير التسويق - شركة التقنية</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="text-warning mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-3">"أفضل منصة SEO جربتها في السوق العربي. التقارير مفصلة جداً والأدوات تساعد في تحسين الترتيب بشكل ملحوظ. أنصح بها بشدة!"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://picsum.photos/seed/user2/50/50.jpg" class="rounded-circle me-3" alt="عميل">
+                            <div>
+                                <h6 class="mb-0">فاطمة علي</h6>
+                                <small class="text-muted">صاحبة متجر إلكتروني</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 text-white" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4">جاهز لرفع ترتيب موقعك؟</h2>
+            <p class="lead mb-4">انضم إلى آلاف العملاء السعداء وابدأ رحلتك نحو التميز في محركات البحث</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="signup.html" class="btn btn-light btn-lg">
+                    <i class="fas fa-rocket"></i> ابدأ تجربتك المجانية
+                </a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-phone"></i> تحدث مع خبير
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3"><i class="fas fa-rocket"></i> RankBoost</h5>
+                    <p>أقوى منصة عربية متخصصة في تحسين محركات البحث وتقديم حلول SEO متكاملة</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="mb-3">روابط سريعة</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">الرئيسية</a></li>
+                        <li><a href="features.html" class="text-white-50">الميزات</a></li>
+                        <li><a href="tools.html" class="text-white-50">الأدوات</a></li>
+                        <li><a href="pricing.html" class="text-white-50">الأسعار</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="mb-3">الموارد</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="blog.html" class="text-white-50">المدونة</a></li>
+                        <li><a href="wiki.html" class="text-white-50">الموسوعة</a></li>
+                        <li><a href="faq.html" class="text-white-50">الأسئلة</a></li>
+                        <li><a href="contact.html" class="text-white-50">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-3">تواصل معنا</h6>
+                    <p><i class="fas fa-envelope"></i> info@rankboost.com</p>
+                    <p><i class="fas fa-phone"></i> +966 50 000 0000</p>
+                    <p><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</p>
+                    <a href="contact.html" class="btn btn-outline-light btn-sm">تواصل الآن</a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 RankBoost. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة الشائعة - RankBoost</title>
+    <meta name="description" content="إجابات على الأسئلة الأكثر شيوعاً حول RankBoost وخدمات تحسين محركات البحث">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #2563eb; --secondary: #8b5cf6; --accent: #ec4899; --dark: #0f172a; --light: #f8fafc; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .page-header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 6rem 0 4rem; }
+        .faq-category { background: white; border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .category-icon { width: 60px; height: 60px; border-radius: 15px; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 1.5rem; }
+        .accordion-button:not(.collapsed) { background: var(--primary); color: white; }
+        .contact-card { background: white; border-radius: 15px; padding: 2rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .navbar { box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-rocket"></i> RankBoost
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">الميزات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools.html">الأدوات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">الأسعار</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">الموارد</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="blog.html">المدونة</a></li>
+                            <li><a class="dropdown-item" href="wiki.html">الموسوعة</a></li>
+                            <li><a class="dropdown-item active" href="faq.html">الأسئلة</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex gap-2 me-2">
+                    <a href="login.html" class="btn btn-outline-primary">تسجيل الدخول</a>
+                    <a href="signup.html" class="btn btn-primary">ابدأ مجاناً</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">الأسئلة الشائعة</h1>
+            <p class="lead">إجابات على الأسئلة الأكثر شيوعاً حول خدماتنا ومنصتنا</p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="ابحث عن سؤال...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="py-5">
+        <div class="container">
+            <!-- General Questions -->
+            <div class="faq-category">
+                <div class="row align-items-center">
+                    <div class="col-md-2 text-center">
+                        <div class="category-icon mx-auto">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <h3>أسئلة عامة</h3>
+                        <p class="text-muted">أسئلة حول RankBoost ومنصتنا بشكل عام</p>
+                    </div>
+                </div>
+                <div class="accordion mt-4" id="generalFAQ">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#gen1">
+                                ما هو RankBoost؟
+                            </button>
+                        </h2>
+                        <div id="gen1" class="accordion-collapse collapse show" data-bs-parent="#generalFAQ">
+                            <div class="accordion-body">
+                                RankBoost هي منصة عربية متخصصة في تحسين محركات البحث (SEO) تقدم مجموعة متكاملة من الأدوات والخدمات لمساعدة المواقع على تحسين ترتيبها في نتائج البحث. نقدم أدوات مجانية للتحليل، وخدمات مدفوعة للتحسين المتقدم، بالإضافة إلى موارد تعليمية شاملة.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gen2">
+                                هل RankBoost مناسب للمبتدئين؟
+                            </button>
+                        </h2>
+                        <div id="gen2" class="accordion-collapse collapse" data-bs-parent="#generalFAQ">
+                            <div class="accordion-body">
+                                نعم تماماً! RankBoost مصمم ليناسب جميع المستويات من المبتدئين إلى المحترفين. نقدم واجهة سهلة الاستخدام، أدوات مجانية للبدء، وموارد تعليمية شاملة لمساعدتك في فهم وتطبيق مفاهيم السيو.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gen3">
+                                ما هي لغات الدعم المتاحة؟
+                            </button>
+                        </h2>
+                        <div id="gen3" class="accordion-collapse collapse" data-bs-parent="#generalFAQ">
+                            <div class="accordion-body">
+                                حالياً نقدم دعماً كاملاً باللغة العربية فقط، بما في ذلك الواجهة، المحتوى التعليمي، والدعم الفني. نخطط لإضافة المزيد من اللغات في المستقبل.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Questions -->
+            <div class="faq-category">
+                <div class="row align-items-center">
+                    <div class="col-md-2 text-center">
+                        <div class="category-icon mx-auto">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <h3>الأسعار والخطط</h3>
+                        <p class="text-muted">أسئلة حول خططنا الأسعار وخيارات الدفع</p>
+                    </div>
+                </div>
+                <div class="accordion mt-4" id="pricingFAQ">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#price1">
+                                ما هي خطط الأسعار المتاحة؟
+                            </button>
+                        </h2>
+                        <div id="price1" class="accordion-collapse collapse show" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                نقدم ثلاث خطط أساسية: الخطة الأساسية ($29/شهر)، الخطة المتقدمة ($79/شهر)، والخطة الاحترافية ($149/شهر). كل خطة تختلف في عدد المواقع، الكلمات المفتاحية، ومستوى الدعم المقدم.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#price2">
+                                هل يمكنني تغيير خطتي لاحقاً؟
+                            </button>
+                        </h2>
+                        <div id="price2" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                نعم، يمكنك ترقية أو تخفيض خطتك في أي وقت. سيتم تطبيق التغيير في الفترة التالية من الفوترة، وستدفع فقط الفرق أو سيتم إضافة رصيد لرصيدك حسب الحالة.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#price3">
+                                هل تقدمون خصومات للدفع السنوي؟
+                            </button>
+                        </h2>
+                        <div id="price3" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
+                            <div class="accordion-body">
+                                نعم، نقدم خصماً بنسبة 20% عند الدفع السنوي لأي من خططنا. هذا يعني توفيراً كبيراً على المدى الطويل مقارنة بالدفع الشهري.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Questions -->
+            <div class="faq-category">
+                <div class="row align-items-center">
+                    <div class="col-md-2 text-center">
+                        <div class="category-icon mx-auto">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <h3>الأسئلة التقنية</h3>
+                        <p class="text-muted">أسئلة حول الأدوات التقنية والاستخدام</p>
+                    </div>
+                </div>
+                <div class="accordion mt-4" id="technicalFAQ">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tech1">
+                                هل أحتاج لتثبيت أي برامج؟
+                            </button>
+                        </h2>
+                        <div id="tech1" class="accordion-collapse collapse show" data-bs-parent="#technicalFAQ">
+                            <div class="accordion-body">
+                                لا، RankBoost منصة سحابية بالكامل. كل ما تحتاجه هو متصفح إنترنت واتصال بالإنترنت. يمكنك الوصول إلى جميع الأدوات والخدمات من أي جهاز وفي أي وقت.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tech2">
+                                هل الأدوات متوافقة مع جميع أنواع المواقع؟
+                            </button>
+                        </h2>
+                        <div id="tech2" class="accordion-collapse collapse" data-bs-parent="#technicalFAQ">
+                            <div class="accordion-body">
+                                نعم، أدواتنا متوافقة مع جميع أنواع المواقع بغض النظر عن منصة البناء المستخدمة (WordPress، Shopify، Wix، أو مواقع مخصصة). تدعم أدواتنا جميع التقنيات الحديثة.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tech3">
+                                كم من الوقت يستغرق تحليل الموقع؟
+                            </button>
+                        </h2>
+                        <div id="tech3" class="accordion-collapse collapse" data-bs-parent="#technicalFAQ">
+                            <div class="accordion-body">
+                                يعتمد الوقت على حجم موقعك. المواقع الصغيرة (حتى 50 صفحة) تستغرق عادة 5-10 دقائق، بينما المواقع الكبيرة (أكثر من 500 صفحة) قد تستغرق 30-60 دقيقة. جميع التحليلات تتم تلقائياً في الخلفية.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Questions -->
+            <div class="faq-category">
+                <div class="row align-items-center">
+                    <div class="col-md-2 text-center">
+                        <div class="category-icon mx-auto">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <h3>الدعم الفني</h3>
+                        <p class="text-muted">أسئلة حول الدعم والمساعدة</p>
+                    </div>
+                </div>
+                <div class="accordion mt-4" id="supportFAQ">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#support1">
+                                ما هي ساعات الدعم المتاحة؟
+                            </button>
+                        </h2>
+                        <div id="support1" class="accordion-collapse collapse show" data-bs-parent="#supportFAQ">
+                            <div class="accordion-body">
+                                نقدم دعماً على مدار الساعة طوال أيام الأسبوع للمشتركين في الخطة الاحترافية. للمشتركين في الخطط الأخرى، الدعم متاح من الساعة 9 صباحاً حتى 6 مساءً بتوقيت السعودية من يوم الأحد إلى الخميس.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#support2">
+                                كيف يمكنني التواصل مع الدعم الفني؟
+                            </button>
+                        </h2>
+                        <div id="support2" class="accordion-collapse collapse" data-bs-parent="#supportFAQ">
+                            <div class="accordion-body">
+                                يمكنك التواصل معنا عبر عدة قنوات: الدردشة المباشرة على الموقع، البريد الإلكتروني support@rankboost.com، أو الهاتف للمشتركين في الخطط المتقدمة والاحترافية. نستجيب عادة للاستفسارات خلال 24 ساعة.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#support3">
+                                هل تقدمون تدريباً لاستخدام المنصة؟
+                            </button>
+                        </h2>
+                        <div id="support3" class="accordion-collapse collapse" data-bs-parent="#supportFAQ">
+                            <div class="accordion-body">
+                                نعم، نقدم موارد تعليمية شاملة تشمل فيديوهات، أدلة، ويبinars مجانية. للمشتركين في الخطط المدفوعة، نقدم جلسات تدريبية شخصية واستشارات مجانية لمساعدتك في تحقيق أقصى استفادة من المنصة.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-card">
+                        <h3 class="mb-4">لم تجد إجابة لسؤالك؟</h3>
+                        <p class="text-muted mb-4">لا تتردد في التواصل معنا، فريقنا جاهز لمساعدتك والإجابة على جميع استفساراتك</p>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="الاسم الكامل">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="الموضوع">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="4" placeholder="اكتب سؤالك هنا..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-paper-plane"></i> إرسال السؤال
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">معلومات التواصل</h5>
+                            <div class="contact-info">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-envelope text-primary me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0">البريد الإلكتروني</h6>
+                                        <small class="text-muted">support@rankboost.com</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-phone text-primary me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0">الهاتف</h6>
+                                        <small class="text-muted">+966 50 000 0000</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-clock text-primary me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0">ساعات العمل</h6>
+                                        <small class="text-muted">الأحد - الخميس: 9 ص - 6 م</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0">الموقع</h6>
+                                        <small class="text-muted">الرياض، المملكة العربية السعودية</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-body text-center">
+                            <i class="fas fa-comments fa-3x text-primary mb-3"></i>
+                            <h5>الدردشة المباشرة</h5>
+                            <p class="text-muted small">تواصل معنا مباشرة عبر الدردشة</p>
+                            <button class="btn btn-primary btn-sm">ابدأ الدردشة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 text-white" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4">جاهز للبدء؟</h2>
+            <p class="lead mb-4">انضم إلى آلاف العملاء السعداء وابدأ تحسين ترتيب موقعك اليوم</p>
+            <a href="signup.html" class="btn btn-light btn-lg">
+                <i class="fas fa-rocket"></i> ابدأ تجربتك المجانية
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3"><i class="fas fa-rocket"></i> RankBoost</h5>
+                    <p>أقوى منصة عربية متخصصة في تحسين محركات البحث وتقديم حلول SEO متكاملة</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="mb-3">روابط سريعة</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">الرئيسية</a></li>
+                        <li><a href="features.html" class="text-white-50">الميزات</a></li>
+                        <li><a href="tools.html" class="text-white-50">الأدوات</a></li>
+                        <li><a href="pricing.html" class="text-white-50">الأسعار</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="mb-3">الموارد</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="blog.html" class="text-white-50">المدونة</a></li>
+                        <li><a href="wiki.html" class="text-white-50">الموسوعة</a></li>
+                        <li><a href="faq.html" class="text-white-50">الأسئلة</a></li>
+                        <li><a href="contact.html" class="text-white-50">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-3">تواصل معنا</h6>
+                    <p><i class="fas fa-envelope"></i> info@rankboost.com</p>
+                    <p><i class="fas fa-phone"></i> +966 50 000 0000</p>
+                    <p><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</p>
+                    <a href="contact.html" class="btn btn-outline-light btn-sm">تواصل الآن</a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 RankBoost. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

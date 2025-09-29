@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - RankBoost</title>
+    <meta name="description" content="تواصل مع فريق RankBoost للحصول على استشارة مجانية أو دعم فني">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #2563eb; --secondary: #8b5cf6; --accent: #ec4899; --dark: #0f172a; --light: #f8fafc; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .page-header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 6rem 0 4rem; }
+        .contact-card { background: white; border-radius: 15px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .info-card { background: white; border-radius: 15px; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.3s; }
+        .info-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .contact-icon { width: 60px; height: 60px; border-radius: 15px; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 1.5rem; }
+        .navbar { box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-rocket"></i> RankBoost
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">الميزات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools.html">الأدوات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">الأسعار</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">الموارد</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="blog.html">المدونة</a></li>
+                            <li><a class="dropdown-item" href="wiki.html">الموسوعة</a></li>
+                            <li><a class="dropdown-item" href="faq.html">الأسئلة</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex gap-2 me-2">
+                    <a href="login.html" class="btn btn-outline-primary">تسجيل الدخول</a>
+                    <a href="signup.html" class="btn btn-primary">ابدأ مجاناً</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">اتصل بنا</h1>
+            <p class="lead">نحن هنا لمساعدتك. تواصل معنا للحصول على استشارة مجانية أو دعم فني</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="info-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>العنوان</h4>
+                        <p class="text-muted">الرياض، المملكة العربية السعودية<br>مركز الملك عبدالله المالي<br>الطابق 15، مكتب 1502</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>الهاتف</h4>
+                        <p class="text-muted">
+                            +966 50 000 0000<br>
+                            +966 11 000 0000<br>
+                            <small class="text-success">متاح من الأحد إلى الخميس 9 ص - 6 م</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card text-center">
+                        <div class="contact-icon mx-auto">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>البريد الإلكتروني</h4>
+                        <p class="text-muted">
+                            info@rankboost.com<br>
+                            support@rankboost.com<br>
+                            sales@rankboost.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-card">
+                        <h3 class="mb-4">أرسل لنا رسالة</h3>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="fullName" class="form-label">الاسم الكامل *</label>
+                                    <input type="text" class="form-control" id="fullName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">البريد الإلكتروني *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">رقم الهاتف</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="company" class="form-label">الشركة</label>
+                                    <input type="text" class="form-control" id="company">
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">الموضوع *</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="">اختر الموضوع</option>
+                                        <option value="consultation">استشارة مجانية</option>
+                                        <option value="pricing">الأسعار والخطط</option>
+                                        <option value="support">دعم فني</option>
+                                        <option value="partnership">شراكة</option>
+                                        <option value="other">أخرى</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">الرسالة *</label>
+                                    <textarea class="form-control" id="message" rows="5" required placeholder="اكتب رسالتك هنا..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            أود تلقي نشرتكم الإخبارية والمقالات المفيدة
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <!-- Office Hours -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3"><i class="fas fa-clock text-primary me-2"></i>ساعات العمل</h5>
+                            <div class="office-hours">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>الإثنين - الخميس</span>
+                                    <span class="fw-bold">9:00 ص - 6:00 م</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>الجمعة</span>
+                                    <span class="fw-bold">9:00 ص - 2:00 م</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>السبت - الأحد</span>
+                                    <span class="text-muted">مغلق</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Chat -->
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <i class="fas fa-comments fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">الدردشة المباشرة</h5>
+                            <p class="text-muted">تواصل معنا مباشرة عبر الدردشة</p>
+                            <button class="btn btn-primary">ابدأ الدردشة</button>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3"><i class="fas fa-share-alt text-primary me-2"></i>تابعنا على</h5>
+                            <div class="d-flex gap-3 justify-content-center">
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">موقعنا</h2>
+                <p class="lead text-muted">زرنا في مقرنا الرئيسي في الرياض</p>
+            </div>
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3632.1234567890!2d46.6753!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDExM6wzMC41MiA0NsKwMTA1wrQwMA!5e0!3m2!1sar!2ssa!4v1234567890123" 
+                        style="border:0; border-radius: 15px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">أسئلة سريعة</h2>
+                <p class="lead text-muted">إجابات سريعة على الأسئلة الشائعة</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title">كم تستغرق الاستشارة المجانية؟</h6>
+                            <p class="card-text text-muted small">عادة ما تستغرق الاستشارة المجانية من 30 إلى 60 دقيقة.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title">هل تقدمون خدمات للشركات الصغيرة؟</h6>
+                            <p class="card-text text-muted small">نعم، لدينا خطط تناسب جميع أحجام الشركات والمشاريع.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title">متى أرى نتائج تحسين السيو؟</h6>
+                            <p class="card-text text-muted small">النتائج الأولية تظهر بعد 3-4 أشهر، والنتائج الكاملة بعد 6-9 أشهر.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h6 class="card-title">هل تقدمون ضماناً على النتائج؟</h6>
+                            <p class="card-text text-muted small">نحن نضمن تحسين الأداء ولكن لا نضمن الترتيب الأول بسبب خوارزميات جوجل.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 text-white" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4">احصل على تحليل مجاني لموقعك</h2>
+            <p class="lead mb-4">قدم طلبك الآن واحصل على تحليل شامل لموقعك بقيمة $500 مجاناً</p>
+            <a href="#" class="btn btn-light btn-lg">
+                <i class="fas fa-gift"></i> اطلب التحليل المجاني
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3"><i class="fas fa-rocket"></i> RankBoost</h5>
+                    <p>أقوى منصة عربية متخصصة في تحسين محركات البحث وتقديم حلول SEO متكاملة</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="mb-3">روابط سريعة</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">الرئيسية</a></li>
+                        <li><a href="features.html" class="text-white-50">الميزات</a></li>
+                        <li><a href="tools.html" class="text-white-50">الأدوات</a></li>
+                        <li><a href="pricing.html" class="text-white-50">الأسعار</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="mb-3">الموارد</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="blog.html" class="text-white-50">المدونة</a></li>
+                        <li><a href="wiki.html" class="text-white-50">الموسوعة</a></li>
+                        <li><a href="faq.html" class="text-white-50">الأسئلة</a></li>
+                        <li><a href="contact.html" class="text-white-50">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-3">تواصل معنا</h6>
+                    <p><i class="fas fa-envelope"></i> info@rankboost.com</p>
+                    <p><i class="fas fa-phone"></i> +966 50 000 0000</p>
+                    <p><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</p>
+                    <a href="contact.html" class="btn btn-outline-light btn-sm">تواصل الآن</a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 RankBoost. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

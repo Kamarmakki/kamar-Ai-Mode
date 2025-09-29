@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدقق السيو الشامل - RankBoost</title>
+    <meta name="description" content="أداة مجانية لتحليل السيو الشامل لموقعك">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #2563eb; --secondary: #8b5cf6; --accent: #ec4899; --dark: #0f172a; --light: #f8fafc; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--light); }
+        .navbar { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .tool-header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 3rem 0; }
+        .url-input-section { background: white; border-radius: 15px; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .results-section { display: none; }
+        .score-card { background: white; border-radius: 15px; padding: 2rem; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+        .score-circle { width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: bold; color: white; }
+        .score-excellent { background: #10b981; }
+        .score-good { background: #f59e0b; }
+        .score-poor { background: #ef4444; }
+        .issue-card { background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 3px 10px rgba(0,0,0,0.1); border-right: 4px solid; }
+        .issue-critical { border-right-color: #ef4444; }
+        .issue-warning { border-right-color: #f59e0b; }
+        .issue-info { border-right-color: #2563eb; }
+        .loading { display: none; text-align: center; padding: 3rem; }
+        .spinner { width: 50px; height: 50px; border: 5px solid #f3f3f3; border-top: 5px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1rem; }
+        .progress-section { background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="../index.html">
+                <i class="fas fa-rocket"></i> RankBoost
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../features.html">الميزات</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../tools.html">الأدوات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pricing.html">الأسعار</a></li>
+                </ul>
+                <div class="ms-auto">
+                    <a href="../login.html" class="btn btn-outline-primary me-2">تسجيل الدخول</a>
+                    <a href="../dashboard.html" class="btn btn-primary">
+                        <i class="fas fa-user"></i> لوحة التحكم
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tool Header -->
+    <section class="tool-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold">مدقق السيو الشامل</h1>
+            <p class="lead">أداة مجانية لتحليل السيو الشامل لموقعك وتقديم توصيات مفصلة</p>
+        </div>
+    </section>
+
+    <!-- Tool Section -->
+    <section class="py-5">
+        <div class="container">
+            <!-- URL Input Section -->
+            <div class="url-input-section">
+                <h3 class="mb-4">أدخل رابط الموقع للتحليل</h3>
+                <div class="row">
+                    <div class="col-md-8">
+                        <input type="url" class="form-control form-control-lg" id="urlInput" 
+                               placeholder="https://example.com" dir="ltr">
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-primary btn-lg w-100" onclick="analyzeSEO()">
+                            <i class="fas fa-search"></i> ابدأ التحليل
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <small class="text-muted">
+                        <i class="fas fa-info-circle"></i> 
+                        سيتم تحليل الموقع بالكامل وتقديم تقرير شامل عن حالة السيو
+                    </small>
+                </div>
+            </div>
+
+            <!-- Loading Section -->
+            <div class="loading" id="loadingSection">
+                <div class="spinner"></div>
+                <h4>جاري تحليل الموقع...</h4>
+                <p>يتم الآن فحص أكثر من 100 معيار سيو مختلف</p>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="resultsSection">
+                <!-- Score Card -->
+                <div class="score-card">
+                    <h3>نقاط السيو الإجمالية</h3>
+                    <div class="score-circle score-good" id="scoreCircle">75/100</div>
+                    <p class="text-muted">جيد - هناك مجال للتحسين</p>
+                </div>
+
+                <!-- Progress Overview -->
+                <div class="progress-section">
+                    <h4 class="mb-3">نظرة عامة على التحليل</h4>
+                    <div class="progress-item mb-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>السيو التقني</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item mb-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>تحسين المحتوى</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item mb-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>تجربة المستخدم</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>الروابط الخارجية</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Issues Section -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="mb-3">المشاكل الحرجة</h4>
+                        <div class="issue-card issue-critical">
+                            <h5><i class="fas fa-exclamation-triangle text-danger me-2"></i> عنوان الصفحة طويل جداً</h5>
+                            <p>عنوان الصفحة يتجاوز 60 حرفاً، مما قد يؤثر على ظهوره في نتائج البحث</p>
+                            <button class="btn btn-outline-danger btn-sm">إصلاح</button>
+                        </div>
+                        <div class="issue-card issue-critical">
+                            <h5><i class="fas fa-exclamation-triangle text-danger me-2"></i> عدم وجود شهادة SSL</h5>
+                            <p>الموقع لا يستخدم HTTPS، مما يؤثر سلباً على الأمان والترتيب</p>
+                            <button class="btn btn-outline-danger btn-sm">إصلاح</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="mb-3">تحذيرات</h4>
+                        <div class="issue-card issue-warning">
+                            <h5><i class="fas fa-exclamation-circle text-warning me-2"></i> وصف Meta مكرر</h5>
+                            <p>بعض الصفحات تستخدم نفس وصف Meta، مما يؤثر على التميز</p>
+                            <button class="btn btn-outline-warning btn-sm">إصلاح</button>
+                        </div>
+                        <div class="issue-card issue-warning">
+                            <h5><i class="fas fa-exclamation-circle text-warning me-2"></i> صور بدون Alt Text</h5>
+                            <p>تم العثور على 5 صور بدون نص بديل، مما يؤثر على سيو الصور</p>
+                            <button class="btn btn-outline-warning btn-sm">إصلاح</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendations Section -->
+                <div class="mt-4">
+                    <h4 class="mb-3">توصيات التحسين</h4>
+                    <div class="issue-card issue-info">
+                        <h5><i class="fas fa-lightbulb text-primary me-2"></i> تحسين سرعة التحميل</h5>
+                        <p>سرعة تحميل الموقع 3.2 ثانية، يفضل تحسينها لتقليل 2 ثانية</p>
+                        <ul class="mt-2">
+                            <li>ضغط الصور</li>
+                            <li>تفعيل التخزين المؤقت</li>
+                            <li>تصغير ملفات CSS و JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="issue-card issue-info">
+                        <h5><i class="fas fa-lightbulb text-primary me-2"></i> تحسين المحتوى</h5>
+                        <p>إضافة محتوى أكثر تفصيلاً وتحسين الكثافة الكلمات المفتاحية</p>
+                        <ul class="mt-2">
+                            <li>إضافة 500 كلمة على الأقل لكل صفحة</li>
+                            <li>تحسين توزيع الكلمات المفتاحية</li>
+                            <li>إضافة روابط داخلية</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Export Options -->
+                <div class="text-center mt-4">
+                    <h4>تصدير التقرير</h4>
+                    <button class="btn btn-primary mx-2">
+                        <i class="fas fa-file-pdf"></i> تحميل PDF
+                    </button>
+                    <button class="btn btn-success mx-2">
+                        <i class="fas fa-file-excel"></i> تحميل Excel
+                    </button>
+                    <button class="btn btn-info mx-2">
+                        <i class="fas fa-share"></i> مشاركة التقرير
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3"><i class="fas fa-rocket"></i> RankBoost</h5>
+                    <p>أقوى منصة عربية متخصصة في تحسين محركات البحث وتقديم حلول SEO متكاملة</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="mb-3">روابط سريعة</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-white-50">الرئيسية</a></li>
+                        <li><a href="../features.html" class="text-white-50">الميزات</a></li>
+                        <li><a href="../tools.html" class="text-white-50">الأدوات</a></li>
+                        <li><a href="../pricing.html" class="text-white-50">الأسعار</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="mb-3">الموارد</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="../blog.html" class="text-white-50">المدونة</a></li>
+                        <li><a href="../wiki.html" class="text-white-50">الموسوعة</a></li>
+                        <li><a href="../faq.html" class="text-white-50">الأسئلة</a></li>
+                        <li><a href="../contact.html" class="text-white-50">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-3">تواصل معنا</h6>
+                    <p><i class="fas fa-envelope"></i> info@rankboost.com</p>
+                    <p><i class="fas fa-phone"></i> +966 50 000 0000</p>
+                    <p><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</p>
+                    <a href="../contact.html" class="btn btn-outline-light btn-sm">تواصل الآن</a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 RankBoost. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function analyzeSEO() {
+            const url = document.getElementById('urlInput').value;
+            
+            if (!url) {
+                alert('الرجاء إدخال رابط الموقع');
+                return;
+            }
+            
+            // Show loading
+            document.getElementById('loadingSection').style.display = 'block';
+            document.getElementById('resultsSection').style.display = 'none';
+            
+            // Simulate analysis
+            setTimeout(() => {
+                document.getElementById('loadingSection').style.display = 'none';
+                document.getElementById('resultsSection').style.display = 'block';
+                
+                // Generate random score
+                const score = Math.floor(Math.random() * 40) + 60;
+                const scoreCircle = document.getElementById('scoreCircle');
+                scoreCircle.textContent = score + '/100';
+                
+                // Update score circle color
+                scoreCircle.className = 'score-circle';
+                if (score >= 85) {
+                    scoreCircle.classList.add('score-excellent');
+                } else if (score >= 70) {
+                    scoreCircle.classList.add('score-good');
+                } else {
+                    scoreCircle.classList.add('score-poor');
+                }
+                
+                // Scroll to results
+                document.getElementById('resultsSection').scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+            }, 3000);
+        }
+        
+        // Handle Enter key
+        document.getElementById('urlInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                analyzeSEO();
+            }
+        });
+    </script>
+</body>
+</html>
